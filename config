@@ -1,5 +1,24 @@
 
 # ########################################################################
+#  Config test
+# ########################################################################
+# These settings is only for testing purpose
+configtest:
+
+  # ########################################################################
+  #  Config test
+  # ########################################################################
+  # These settings is only for testing purpose.test1
+  test1:
+    test2:
+      field1: '1.0'
+      field2: '2.0'
+    test2-2:
+      field3: '3.0'
+    test2-3:
+      field4: '4.0'
+
+# ########################################################################
 # Rewards for killing mobs.
 # ########################################################################
 # Here is where you set the base prize in $ for killing a mob of each type
@@ -21,147 +40,151 @@
 # 
 # You can run many console commands on each line, each command
 # must be separated by |
-# The player will have the cmd run in {mob-cmd-run-frequency} out of
-# {mob-cmd-run-frequency-base} times in average. If mob-cmd-run-frequency=0 it
-# will never run. If f.ex. mob-cmd-run-frequency=50 and 
-# mob-cmd-run-frequency-base=100 it will run run every second time.
+# The player will have the cmd run in {mob-cmd-run-chance} times in average. If mob-cmd-run-chance=0 it
+# will never run. If f.ex. mob-cmd-run-chance=0.50 and it will run run every second time in average.
+# 
+# The mobname-head-prize is only used if you want the dropped heads after killing a mob to have a value.
+# Please also check the "dropmoneyonground" section in this file.
 mobs:
   blaze: '0.0'
   blaze-cmd: mobhunt head give {player} Blaze|give {player} iron_nugget 1
   blaze-cmd-desc: You got a Blaze skull and an Iron nugget.
-  blaze-cmd-run-frequency: 10
-  blaze-cmd-run-frequency-base: 100
+  blaze-cmd-run-chance: 0.01
+  blaze-head-prize: '0'
   cave-spider: '0'
   cave-spider-cmd: mobhunt head give {player} Cave_Spider|give {player} iron_nugget 1
   cave-spider-cmd-desc: You got a Cave Spider skull and an Iron nugget.
-  cave-spider-cmd-run-frequency: 10
-  cave-spider-cmd-run-frequency-base: 100
+  cave-spider-cmd-run-chance: 0.01
+  cave-spider-head-prize: '0'
   creeper: '0'
   creeper-cmd: mobhunt head give {player} Creeper|give {player} iron_nugget 1
   creeper-cmd-desc: You got a Creeper skull and an Iron nugget.
-  creeper-cmd-run-frequency: 5
-  creeper-cmd-run-frequency-base: 100
+  creeper-cmd-run-chance: 0.05
+  creeper-head-prize: '0'
   elder-guardian: '0'
   elder-guardian-cmd: mobhunt head give {player} ElderGuardian|give {player} iron_nugget 1
   elder-guardian-cmd-desc: You got a Elder Guardian skull and an Iron nugget.
-  elder-guardian-cmd-run-frequency: 33
-  elder-guardian-cmd-run-frequency-base: 100
+  elder-guardian-cmd-run-chance: 0.05
+  elder-guardian-head-prize: '0'
   enderman: '0'
   enderman-cmd: mobhunt head give {player} Enderman|give {player} gold_nugget 1
   enderman-cmd-desc: You got a Enderman skull and an Gold nugget.
-  enderman-cmd-run-frequency: 10
-  enderman-cmd-run-frequency-base: 100
+  enderman-cmd-run-chance: 0.01
+  enderman-head-prize: '0'
   endermite: '0'
   endermite-cmd: mobhunt head give {player} Endermite|give {player} iron_nugget 1
   endermite-cmd-desc: You got a Endermite skull and an Iron nugget.
-  endermite-cmd-run-frequency: 10
-  endermite-cmd-run-frequency-base: 100
+  endermite-cmd-run-chance: 0.01
+  endermite-head-prize: '0'
   evoker: '0'
   evoker-cmd: mobhunt head give {player} evoker|give {player} iron_nugget 1
   evoker-cmd-desc: You got a Evoker skull and an Iron nugget.
-  evoker-cmd-run-chance: 0.5
+  evoker-cmd-run-chance: 0.01
+  evoker-head-prize: '0'
   ghast: '0'
   ghast-cmd: mobhunt head give {player} Ghast|give {player} 406 4
   ghast-cmd-desc: You got a Ghast skull and 4 Nether Quartz.
-  ghast-cmd-run-frequency: 10
-  ghast-cmd-run-frequency-base: 100
+  ghast-cmd-run-chance: 0.1
+  ghast-head-prize: '0'
   giant: '0'
   giant-cmd: mobhunt head give {player} Giant|give {player} iron_nugget 1
   giant-cmd-desc: You got a Giant head and an iron nugget.
-  giant-cmd-run-frequency: 5
-  giant-cmd-run-frequency-base: 100
+  giant-cmd-run-chance: 0.05
+  giant-head-prize: '0'
   iron-golem: '0'
   iron-golem-cmd: mobhunt head give {player} Iron_Golem|give {player} iron_nugget 4
   iron-golem-cmd-desc: You got an Iron Golem skull and 4 Iron nugget.
-  iron-golem-cmd-run-frequency: 10
-  iron-golem-cmd-run-frequency-base: 100
+  iron-golem-cmd-run-chance: 0.01
+  iron-golem-head-prize: '0'
   guardian: '0'
   guardian-cmd: mobhunt head give {player} Guardian|give {player} iron_nugget 1
   guardian-cmd-desc: You got a Guardian skull and an Iron nugget.
-  guardian-cmd-run-frequency: 10
-  guardian-cmd-run-frequency-base: 100
-  husk: '90'
+  guardian-cmd-run-chance: 0.01
+  guardian-head-prize: '0'
+  husk: '0'
   husk-cmd: mobhunt head give {player} Husk|give {player} iron_nugget 1
   husk-cmd-desc: You got a Zombie Husk skull and an Iron nugget.
-  husk-cmd-run-frequency: 50
-  husk-cmd-run-frequency-base: 100
+  husk-cmd-run-chance: 0.02
+  husk-head-prize: '0'
   killerrabbit: '0'
   killerrabbit-cmd: mobhunt head give {player} KillerRabbit|give {player} iron_nugget 1
   killerrabbit-cmd-desc: You got Killer Rabbit Skull and an iron nugget.
-  killerrabbit-cmd-run-frequency: 25
-  killerrabbit-cmd-run-frequency-base: 100
+  killerrabbit-cmd-run-chance: 0.25
+  killerrabbit-head-prize: '0'
 
   # This is multiplied by the size of the magma cube. So a big natural magma cube is 4x this value
   magma-cube: '0'
   magma-cube-cmd: mobhunt head give {player} MAGMA_CUBE|give {player} iron_nugget 1
   magma-cube-cmd-desc: You got a Magma Cube skull and an Iron nugget.
-  magma-cube-cmd-run-frequency: 10
-  magma-cube-cmd-run-frequency-base: 100
+  magma-cube-cmd-run-chance: 0.1
+  magma-cube-head-prize: '0'
   polar-bear: '0'
   polar-bear-cmd: mobhunt head give {player} Polar_Bear|give {player} iron_nugget 1
   polar-bear-cmd-desc: You got a Polar Bear skull and an Iron nugget.
-  polar-bear-cmd-run-frequency: 50
-  polar-bear-cmd-run-frequency-base: 100
+  polar-bear-cmd-run-chance: 0.1
+  polar-bear-head-prize: '0'
 
   # This is multiplied by the size of the slime. So a big natural slime is 4x this value
   slime-base: '0'
   slime-cmd: mobhunt head give {player} Slime|give {player} iron_nugget 1
   slime-cmd-desc: You got a Slime skull and an Iron nugget.
-  slime-cmd-run-frequency: 5
-  slime-cmd-run-frequency-base: 100
+  slime-cmd-run-chance: 0.05
+  slime-head-prize: '0'
   shulker: '0'
   shulker-cmd: mobhunt head give {player} Shulker|give {player} iron_nugget 1
   shulker-cmd-desc: You got a Shulker skull and an Iron nugget.
-  shulker-cmd-run-frequency: 50
-  shulker-cmd-run-frequency-base: 100
+  shulker-cmd-run-chance: 0.1
+  shulker-head-prize: '0'
   stray: '0'
   stray-cmd: mobhunt head give {player} Stray|give {player} iron_nugget 1
   stray-cmd-desc: You got a Skeleton Stray skull and an Iron nugget.
-  stray-cmd-run-frequency: 50
-  stray-cmd-run-frequency-base: 100
+  stray-cmd-run-chance: 0.1
+  stray-head-prize: '0'
   silverfish: '0'
   silverfish-cmd: mobhunt head give {player} SilverFish|give {player} iron_nugget 1
-  silver-cmd-desc: You got a SilverFish head and an iron nugget.
-  silverfish-cmd-run-frequency: 10
-  silverfish-cmd-run-frequency-base: 100
+  silverfish-cmd-desc: You got a SilverFish head and an iron ingot.
+  silverfish-cmd-run-chance: 0.1
+  silverfish-head-prize: '0'
   skeleton: '0'
   skeleton-cmd: mobhunt head give {player} Skeleton|give {player} dye 1 4
   skeleton-cmd-desc: You got 1 Skeleton skull and 1 Lapis Lazuli.
-  skeleton-cmd-run-frequency: 5
-  skeleton-cmd-run-frequency-base: 100
+  skeleton-cmd-run-chance: 0.05
+  skeleton-head-prize: '0'
   spider: '0'
   spider-cmd: mobhunt head give {player} Spider|give {player} iron_nugget 1
   spider-cmd-desc: You got a Spider skull and an Iron nugget.
-  spider-cmd-run-frequency: 5
-  spider-cmd-run-frequency-base: 100
+  spider-cmd-run-chance: 0.05
+  spider-head-prize: '0'
   zombie: '0'
   zombie-cmd: mobhunt head give {player} Zombie|give {player} iron_nugget 1
   zombie-cmd-desc: You got a Zombie skull and an Iron nugget.
-  zombie-cmd-run-frequency: 50
-  zombie-cmd-run-frequency-base: 1000
+  zombie-cmd-run-chance: 0.005
+  zombie-head-prize: '0'
   zombie-pigman: '0'
   zombie-pigman-cmd: mobhunt head give {player} Pig_Zombie|give {player} iron_nugget 1
   zombie-pigman-cmd-desc: You got a Zombie Pigman skull and an Iron nugget.
-  zombie-pigman-cmd-run-frequency: 10
-  zombie-pigman-cmd-run-frequency-base: 100
+  zombie-pigman-cmd-run-chance: 0.05
+  zombie-pigman-head-prize: '0'
   vex: '0'
   vex-cmd: mobhunt head give {player} Witch|give {player} gold_nugget 1
   vex-cmd-desc: You got a Vex skull and an Gold nugget.
-  vex-cmd-run-chance: 0.5
+  vex-cmd-run-chance: 0.05
+  vex-head-prize: '0'
   vindicator: '0'
   vindicator-cmd: mobhunt head give {player} Witch|give {player} gold_nugget 1
   vindicator-cmd-desc: You got a Vindicator skull and an Gold nugget.
   vindicator-cmd-run-chance: 0.05
+  vindicator-head-prize: '0'
   witch: '0'
   witch-cmd: mobhunt head give {player} Witch|give {player} gold_nugget 1
   witch-cmd-desc: You got a Witch skull and an Gold nugget.
-  witch-cmd-run-frequency: 5
-  witch-cmd-run-frequency-base: 100
+  witch-cmd-run-chance: 0.05
+  witch-head-prize: '0'
   wither-skeleton: '0'
   wither-skeleton-cmd: mobhunt head give {player} WitherSkeleton|give {player} gold_nugget 1
   wither-skeleton-cmd-desc: You got 1 Wither Skeleton skull and 1 Gold nugget.
-  wither-skeleton-cmd-run-frequency: 10
-  wither-skeleton-cmd-run-frequency-base: 100
+  wither-skeleton-cmd-run-chance: 0.05
+  wither-skeleton-head-prize: '0'
 
 # ########################################################################
 # Rewards for killing bosses
@@ -171,13 +194,13 @@ boss:
   wither: '0'
   wither-cmd: mobhunt head give {player} Wither
   wither-cmd-desc: You got a Wither skull.
-  wither-cmd-run-frequency: 50
-  wither-cmd-run-frequency-base: 100
+  wither-cmd-run-chance: 0.5
+  wither-head-prize: '0'
   enderdragon: '0'
   enderdragon-cmd: mobhunt head give {player} Enderdragon|give {player} elytra 1
   enderdragon-cmd-desc: You got a Enderdragon skull and 1 elytra.
-  enderdragon-cmd-run-frequency: 100
-  enderdragon-cmd-run-frequency-base: 100
+  enderdragon-cmd-run-chance: 1
+  enderdragon-head-prize: '0'
 
 # ########################################################################
 # Rewards for killing villagers
@@ -187,40 +210,48 @@ villager:
   cartographer: '0'
   cartographer-cmd: ''
   cartographer-cmd-desc: ''
-  cartographer-cmd-run-chance: 1.0
+  cartographer-cmd-run-chance: 0.01
+  cartographer-head-prize: '0'
   nitwit: '0'
   nitwit-cmd: ''
   nitwit-cmd-desc: ''
-  nitwit-cmd-run-chance: 1.0
+  nitwit-cmd-run-chance: 0.01
+  nitwit-head-prize: '0'
   farmer: '0'
   farmer-cmd: ''
   farmer-cmd-desc: ''
-  farmer-cmd-run-chance: 1.0
+  farmer-cmd-run-chance: 0.01
+  farmer-head-prize: '0'
   priest: '0'
   priest-cmd: ''
   priest-cmd-desc: ''
-  priest-cmd-run-chance: 1.0
+  priest-cmd-run-chance: 0.01
+  priest-head-prize: '0'
   blacksmith: '0'
   blacksmith-cmd: ''
   blacksmith-cmd-desc: ''
-  blacksmith-cmd-run-chance: 1.0
+  blacksmith-cmd-run-chance: 0.01
+  blacksmith-head-prize: '0'
   butcher: '0'
   butcher-cmd: ''
   butcher-cmd-desc: ''
-  butcher-cmd-run-chance: 1.0
+  butcher-cmd-run-chance: 0.01
+  butcher-head-prize: '0'
   librarian: '0'
   librarian-cmd: ''
   librarian-cmd-desc: ''
-  librarian-cmd-run-chance: 1.0
+  librarian-cmd-run-chance: 0.01
+  librarian-head-prize: '0'
   villager: '0'
   villager-cmd: mobhunt head give {player} Villager
   villager-cmd-desc: You got a Villager Skull
-  villager-cmd-run-frequency: 0
-  villager-cmd-run-frequency-base: 100
+  villager-cmd-run-chance: 0.03
+  villager-head-prize: '0'
   zombie-villager: '0'
   zombie-villager-cmd: ''
   zombie-villager-cmd-desc: ''
-  zombie-villager-cmd-run-chance: 1.0
+  zombie-villager-cmd-run-chance: 0.01
+  zombie-head-prize: '0'
 
 # ########################################################################
 # Rewards for killing passive mobs
@@ -232,105 +263,117 @@ passive:
   bat: '0'
   bat-cmd: mobhunt head give {player} Bat
   bat-cmd-desc: You got a Bat Skull
-  bat-cmd-run-frequency: 1
-  bat-cmd-run-frequency-base: 100
+  bat-cmd-run-chance: 0.01
+  bat-head-prize: '0'
   chicken: '0'
   chicken-cmd: mobhunt head give {player} Chicken
   chicken-cmd-desc: You got a Chicken Skull
-  chicken-cmd-run-frequency: 1
-  chicken-cmd-run-frequency-base: 100
+  chicken-cmd-run-chance: 0.01
+  chicken-head-prize: '0'
   cow: '0'
   cow-cmd: mobhunt head give {player} Cow
   cow-cmd-desc: You got a Cow Skull
-  cow-cmd-run-frequency: 1
-  cow-cmd-run-frequency-base: 100
+  cow-cmd-run-chance: 0.01
+  cow-head-prize: '0'
   donkey: '0'
   donkey-cmd: mobhunt head give {player} donkey
   donkey-cmd-desc: You got a Donkey Skull
   donkey-cmd-run-chance: 0.01
+  donkey-head-prize: '0'
   horse: '0'
   horse-cmd: mobhunt head give {player} Horse
   horse-cmd-desc: You got a Horse Skull
-  horse-cmd-run-frequency: 1
-  horse-cmd-run-frequency-base: 100
+  horse-cmd-run-chance: 0.01
+  horse-head-prize: '0'
   llama: '0'
   llama-cmd: mobhunt head give {player} llama
   llama-cmd-desc: You got a Llama Skull
   llama-cmd-run-chance: 0.01
+  llama-head-prize: '0'
   mule: '0'
   mule-cmd: mobhunt head give {player} mule
   mule-cmd-desc: You got a Mule Skull
   mule-cmd-run-chance: 0.01
+  mule-head-prize: '0'
   mushroom-cow: '0'
   mushroom-cow-cmd: mobhunt head give {player} Mushroom_Cow
   mushroom-cow-cmd-desc: You got a Mushroom Cow Skull
-  mushroom-cow-cmd-run-frequency: 1
-  mushroom-cow-cmd-run-frequency-base: 100
+  mushroom-cow-cmd-run-chance: 0.01
+  mushroom-cow-head-prize: '0'
   ocelot: '0'
   ocelot-cmd: mobhunt head give {player} Ocelot
   ocelot-cmd-desc: ''
-  ocelot-cmd-run-frequency: 1
-  ocelot-cmd-run-frequency-base: 100
+  ocelot-cmd-run-chance: 0.01
+  ocelot-head-prize: '0'
   pig: '0'
   pig-cmd: mobhunt head give {player} Pig
   pig-cmd-desc: You got a Pig Skull
-  pig-cmd-run-frequency: 1
-  pig-cmd-run-frequency-base: 100
+  pig-cmd-run-chance: 0.01
+  pig-head-prize: '0'
   rabbit: '0'
   rabbit-cmd: mobhunt head give {player} Rabbit
   rabbit-cmd-desc: You got a Rabbit Skull
-  rabbit-cmd-run-frequency: 1
-  rabbit-cmd-run-frequency-base: 100
+  rabbit-cmd-run-chance: 0.01
+  rabbit-head-prize: '0'
   sheep: '0'
   sheep-cmd: mobhunt head give {player} Sheep
   sheep-cmd-desc: You got a Sheep Skull
-  sheep-cmd-run-frequency: 1
-  sheep-cmd-run-frequency-base: 100
+  sheep-cmd-run-chance: 0.01
+  sheep-head-prize: '0'
   skeletonhorse: '0'
   skeletonhorse-cmd: mobhunt head give {player} skeletonhorse
   skeletonhorse-cmd-desc: You got a SkeletonHorse Skull
   skeletonhorse-cmd-run-chance: 0.01
+  skeletonhorse-head-prize: '0'
   snowman: '0'
   snowman-cmd: mobhunt head give {player} SnowMan
   snowman-cmd-desc: You got a Snowman Skull
-  snowman-cmd-run-frequency: 1
-  snowman-cmd-run-frequency-base: 100
+  snowman-cmd-run-chance: 0.01
+  snowman-head-prize: '0'
   squid: '0'
   squid-cmd: mobhunt head give {player} Squid
   squid-cmd-desc: You got a Squid Skull
-  squid-cmd-run-frequency: 1
-  squid-cmd-run-frequency-base: 100
+  squid-cmd-run-chance: 0.01
+  squid-head-prize: '0'
   wolf: '0'
   wolf-cmd: mobhunt head give {player} Wolf
   wolf-cmd-desc: You got a Wolf Skull
-  wolf-cmd-run-frequency: 1
-  wolf-cmd-run-frequency-base: 100
+  wolf-cmd-run-chance: 0.01
+  wolf-head-prize: '0'
   zombiehorse: '0'
   zombiehorse-cmd: mobhunt head give {player} zombiehorse
   zombiehorse-cmd-desc: You got a ZombieHorse Skull
-  zombiehorse-cmd-run-chance: 0.25
+  zombiehorse-cmd-run-chance: 0.01
+  zombiehorse-head-prize: '0'
 
 # ########################################################################
 # Rewards for fishing
 # ########################################################################
 # Here is where you set the base prize in $ for catching a fish
 fishing:
+
+  # Set this to true if you want to disable all fishing rewards / features.
+  disable-fishing-rewards: false
   rawfish: '0'
-  rawfish-cmd: mobhunt head give {player} rawfish
-  rawfish-cmd-desc: You got a head of a fish
-  rawfish-cmd-run-chance: 0.05
+  rawfish-cmd: mobhunt head give {player} rawfish Raw_Fish 1 silent
+  rawfish-cmd-desc: You got a head of a Raw Fish
+  rawfish-cmd-run-chance: 0.01
+  rawfish-head-prize: '0'
   rawsalmon: '0'
-  rawsalmon-cmd: mobhunt head give {player} rawsalmon
-  rawsalmon-cmd-desc: You got a head of a Salmon
-  rawsalmon-cmd-run-chance: 0.1
+  rawsalmon-cmd: mobhunt head give {player} rawsalmon Raw_Salmon 1 silent
+  rawsalmon-cmd-desc: You got a head of a Raw Salmon
+  rawsalmon-cmd-run-chance: 0.01
+  rawSalmon-head-prize: '0'
   clownfish: '0'
-  clownfish-cmd: mobhunt head give {player} clownfish
+  clownfish-cmd: mobhunt head give {player} clownfish Clowfish 1 silent
   clownfish-cmd-desc: You got a head of a Clownfish
-  clownfish-cmd-run-chance: 0.5
+  clownfish-cmd-run-chance: 0.05
+  clownfish-head-prize: '0'
   pufferfish: '0'
-  pufferfish-cmd: mobhunt head give {player} pufferfish
+  pufferfish-cmd: mobhunt head give {player} pufferfish Pufferfish 1 silent
   pufferfish-cmd-desc: You got a head of a Pufferfish
-  pufferfish-cmd-run-chance: 0.4
+  pufferfish-cmd-run-chance: 0.05
+  pufferfish-head-prize: '0'
 
 # ########################################################################
 #  Bonus multipliers
@@ -350,6 +393,7 @@ bonus:
   mounted: 1.5
   friendly-fire: 4.0
   bonus-mob: 10.0
+  bonusMob-head-prize: '100'
   critical: 2.0
 
   # This is the chance (% chance 0-100) that a bonus mob will spawn.
@@ -550,7 +594,7 @@ grinding:
   # Set 'enable-grinding-penalty: false' to disable the grinding detection.
   # OBS: You can whitelist an area to allow grinding using '/mobhunt whitelistarea <add|remove>'
   # if the area is detected as a grinding area. See also '/mobhunt checkgrinding'
-  enable-grinding-penalty: true
+  enable-grinding-penalty: false
 
   # For each kill MobHunting check number of kills within this number of blocks.
   # If number of kills exceeds 10, the reward will decrese with 10% until 20 kills with
@@ -646,7 +690,7 @@ pvp:
   pvp-allowed: true
 
   # Set rob-from-victim=true to steal from the victim or 
-  # rob-from-victim=false to get the reward mpney from the server.
+  # rob-from-victim=false to get the reward money from the server.
   rob-from-victim: true
 
   # The kill prize can be a number to steal x dollars from the killed player,
@@ -654,13 +698,16 @@ pvp:
   pvp-kill-prize: 2%
 
   # One or more console commands to be run when a player kills another player.
-  pvp-kill-cmd: give {player} 397 1 3 {SkullOwner:"{killed_player}"}
+  pvp-kill-cmd: give {player} skull 1 3 {SkullOwner:"{killed_player}"}
 
   # Write the message to the killer, describing the reward / console commands
   pvp-kill-cmd-desc: You got {killed_player}'s skull
 
   # This is the chance for running the command. 1 = 100% (each time the player is killed), 0.5 ~ 50% and 0.001 = 0.1% (very rare) 
-  pvp-kill-cmd-run-chance: 0.5
+  pvp-kill-cmd-run-chance: 0.25
+
+  # The Head price if you want playerheads to have a value like the bag of gold.
+  pvp-head-prize: '10'
 
 # ########################################################################
 # Disguises rewards
@@ -676,13 +723,13 @@ disguises:
   disable-integration-disguisecraft: false
 
   # Disable integration with LibsDisguises
-  disable-integration-libsdisguises: false
+  disable-integration-libsdisguises: true
 
   # Set pvpAllowed=false to disable rewards on killing other players.
   remove-disguise-when-attacking: true
 
   # Set pvpAllowed=false to disable rewards on killing other players.
-  remove-disguise-when-attacked: true
+  remove-disguise-when-attacked: false
 
   # Bonus multiplier for killing while disgused.
   # Can be both positive an negative = reward or penalty
@@ -704,6 +751,8 @@ npc:
 
   # Set the number of seconds between each check. Recommended setting is
   # masterMobHunter_check_every: 300 ~ to update all MasterMobHunters every 5th minute.
+  # Be careful not to lower this number too much. It can cause lag and server crashes 
+  # because of database lockings.
   masterMobHunter_check_every: 300
 
 # ########################################################################
@@ -806,6 +855,40 @@ conquestiamobs:
   multiplier_per_level: 1.05
 
 # ########################################################################
+# Factions settings
+# ########################################################################
+# Here you can change the behavior of the Factions integration, or you can disable
+# integration completely.
+# https://www.spigotmc.org/resources/factions.1900/
+factions:
+
+  # Disable integration with Factions.
+  # https://www.massivecraft.com/
+  disable-integration-factions: false
+
+  # This is the bonus when a player kills a mob or a player in a Factions WarZone.
+  factions_warzone_multiplier: 1.1
+
+# ########################################################################
+# Towny settings
+# ########################################################################
+# Here you can change the behavior of the Towny integration, or you can disable
+# integration completely.
+# http://towny.palmergames.com/
+towny:
+
+  # Disable integration with Towny.
+  # http://towny.palmergames.com/
+  disable-integration-towny: false
+
+  # Disable rewards when the player is in his hometown.
+  # http://towny.palmergames.com/
+  disable-rewards-in-home-town: false
+
+  # Disable naturally drops and xp drops when th eplayer kill mobs in his home town.
+  disable-naturally-drops-and-xp-in-home-town: false
+
+# ########################################################################
 # DropMoneyOnGround Settings
 # ########################################################################
 dropmoneyonground:
@@ -815,11 +898,6 @@ dropmoneyonground:
   # dropped on ground to be picked up by the player.
   # Negative rewards will always be taken from the player. 
   drop-money-on-ground: true
-
-  # Dark room mobspawners usually collect items in a HOPPER. This is denied by default.
-  # If you want HOPPERS to collect MobHunting Money rewards 
-  # set "deny-hoppers-to-pickup-money-on-ground"=true
-  deny-hoppers-to-pickup-money-on-ground: true
 
   # Here you can set the type of the ITEM to be dropped.
   # You can choose between "ITEM","KILLED","SKULL","KILLER". The default is ITEM.
@@ -833,26 +911,39 @@ dropmoneyonground:
   # OBS: If the Gringotts plugin is installed and support not disabled, the droped item will be the Gringotts chosen item.
   # Examples:
   # 
-  # Bag of gold: (https://mineskin.org/3384)
+  # Bag of gold: (https://mineskin.org/6875)
   # 
-  # drop-money-on-ground-skull-playerUUID: '3eb9e46c-72ca-374d-8314-058a96cd0e8d'
+  # drop-money-on-ground-skull-reward-name: 'Bag of gold'
+  # drop-money-on-ground-skull-texture-value: 'eyJ0aW1lc3RhbXAiOjE0ODU5MTIwNjk3OTgsInByb2ZpbGVJZCI6IjdkYTJhYjNhOTNjYTQ4ZWU4MzA0OGFmYzNiODBlNjhlIiwicHJvZmlsZU5hbWUiOiJHb2xkYXBmZWwiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzM5NmNlMTNmZjYxNTVmZGYzMjM1ZDhkMjIxNzRjNWRlNGJmNTUxMmYxYWRlZGExYWZhM2ZjMjgxODBmM2Y3In19fQ=='
+  # drop-money-on-ground-skull-texture-signature: 'm8u2ChI43ySVica7pcY0CsCuMCGgAdN7c9f/ZOxDZsPzJY8eiDrwxLIh6oPY1rvE1ja/rmftPSmdnbeHYrzLQ18QBzehFp8ZVegPsd9iNHc4FuD7nr1is2FD8M8AWAZOViiwlUKnfd8avb3SKfvFmhmVhQtE+atJYQrXhJwiqR4S+KTccA6pjIESM3AWlbCOmykg31ey7MQWB4YgtRp8NyFD3HNTLZ8alcEXBuG3t58wYBEME1UaOFah45tHuV1FW+iGBHHFWLu1UsAbg0Uw87Pp+KSTUGrhdwSc/55czILulI8IUnUfxmkaThRjd7g6VpH/w+9jLvm+7tOwfMQZlXp9104t9XMVnTAchzQr6mB3U6drCsGnuZycQzEgretQsUh3hweN7Jzz5knl6qc1n3Sn8t1yOvaIQLWG1f3l6irPdl28bwEd4Z7VDrGqYgXsd2GsOK/gCQ7rChNqbJ2p+jCja3F3ZohfmTYOU8W7DJ8Ne+xaofSuPnWODnZN9x+Y+3RE3nzH9tzP+NBMsV3YQXpvUD7Pepg7ScO+k9Fj3/F+KfBje0k6xfl+75s7kR3pNWQI5EVrO6iuky6dMuFPUBfNfq33fZV6Tqr/7o24aKpfA4WwJf91G9mC18z8NCgFR6iK4cPGmkTMvNtxUQ3MoB0LCOkRcbP0i7qxHupt8xE='
+  # 
+  # Bag of gold (alternative): (https://mineskin.org/3384)
+  # 
+  # drop-money-on-ground-skull-reward-name: 'Bag of gold'
   # drop-money-on-ground-skull-texture-value: 'eyJ0aW1lc3RhbXAiOjE0NzQzMzI0MzY1MDYsInByb2ZpbGVJZCI6IjNlMjZiMDk3MWFjZDRjNmQ5MzVjNmFkYjE1YjYyMDNhIiwicHJvZmlsZU5hbWUiOiJOYWhlbGUiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg2NzczZDc0Y2Y1MDhmZDc3Yzc4MmZmZDI5ZGYyZmU0N2ZiNzE0YjViMGQ3ZGU2N2Q1Mjg2OTMxZTJmMWRmMiJ9fX0='
   # drop-money-on-ground-skull-texture-signature: 'JdvJksowuxYQ0eqf56J+Dmczg7zvlw2DbIc58Q33kRt65uMUNn2iRCQsbNpztC1cAAgyYMOyFDiOUZQeIK03CSRoPLDtWp2u501YoGKqhjgrE0V0UDh3JetWKz4Ob0KmATtY+4R2vSoMjHFEFppM0Oq+8ZER12FAiVEMAzeseFN3Z9fWAMc/V10LoquGBpq6ExTfSCEEMDEGZopF1T8ZBKL0vf4DVendfz4v3yl7bRBzISZEAnF+ECTa9z36r8HRqS8+s0eO/AWYQcRaKIu9H+wSK5F/1v+rgifeSlMAnt1Na8m1b5tMfNuq6pXxWCq4nUGgYVTOLUinqs9ZcFz3Z6Mtx5YtymKk2M0mzxmTm9+AeOL4s3K/UrJYQlcmLBJSv4hd6EigJXoashzWNCHKmFDYCdEhh4FArq4G9vRZtoudcTeMsvi0VmXIgER8U5iSfoTtzXcGbf/GT0ECtgfeA40f5oCqyE4nXreudMmvlDCBr/KHbILQWeeH/jhtYqQ6OwJb3Ji2Bs9F5fQmICSqk7X4yKzexf8rdDhOG1z+/TCot7K8unPVuQx46sXPeP7t2hCiHOXMAnOMt8vuL3gQUURIEM6fMryjmlKsgvk8Jo0gawavRCIZQtA6vT0JRRnSAchzEOA7QP1iiVV3LnwX9Yqw7oMJ/+REV1hWesuzDOc='
   # 
   # Chest: (https://mineskin.org/3136)
   # 
-  # drop-money-on-ground-skull-playerUUID: 'e572342f-5552-3c82-b163-c776e3b57da4'
+  # drop-money-on-ground-skull-reward-name: 'Treasure chest'
   # drop-money-on-ground-skull-texture-value: 'eyJ0aW1lc3RhbXAiOjE0NzI4Mzk3Nzk2ODMsInByb2ZpbGVJZCI6ImIwZDRiMjhiYzFkNzQ4ODlhZjBlODY2MWNlZTk2YWFiIiwicHJvZmlsZU5hbWUiOiJJbnZlbnRpdmVHYW1lcyIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTY5NDcxMjQ1YmNhN2M0ZmUwNjQ0MGQ5YjRiOWY3NDIxN2VkNzM0M2FhZDU5YTc5MThiMWExZDYxZDhiYTZkYSJ9fX0='
   # drop-money-on-ground-skull-texture-signature: 'lVA2QIbvybpzhcXof5yWz/7nkHdhG/3MGO+1DyD1txdRCALV6BRwsDUBwIUg06MkLUpBkjmiOvFcCRgal/jDE/xkkJPyk2tb/w4NtQ5PiPiAe0oInVnuiSIVFIE4tnsCdvX0joll3uKwVu6XY3t1KEsqJATcPhA5hslVn1iOp/IfMziIfuCzzob04rScpwcw0mLNtbtbMVAl6LYR9gXVuOkAfXujuYq4lbI/iW0yuLxSAzr8i9QWBP2ftup4qQHwocQRTdUE6/G5G9LwJWXhhnqKWjgjfvL0y2FRFJkgN1cvuq7DvUDBVsePnRIHwU5YvBPMjcZe/KE8VPTSodsN84/+++5p95Puxe1DXMX822xR71IQsxM7eax7Ffrr/Tzxw2rSDh9ivGGlRAB85OHwp/ouUgWNSrT8inNMYImque9EuZku9p3OFet8iZsFhkMXANeNtTVL7LKV7/L/0YWwoeyBnw5QQqvGyWKw3dac5eDkRNCyCtdDIntM5vsd8FxnIFj36zxLWgmrJmOM9hg5PBM4gcDxxryBcug8jSe+W9XDU39OOJotXajj8dgSL8yUn+d7l4Qvat/vJbAE8lonMl7P0P9QBPzmcIUvlRMuHSpRZQYkoCbwc2Filahd/5INtm7I4Y28XYzzupdwLk3cavKfOloL5YrWNqaZr/+9Tbk='
   # 
   # Birthday present: (https://mineskin.org/4743)
   # 
-  # drop-money-on-ground-skull-playerUUID: '6eb23602-2c22-34b8-b6b1-1847931c1a6d'
+  # drop-money-on-ground-skull-reward-name: 'Birthday present'
   # drop-money-on-ground-skull-texture-value: 'eyJ0aW1lc3RhbXAiOjE0Nzk5MzEzNDMxMjgsInByb2ZpbGVJZCI6IjNlMjZiMDk3MWFjZDRjNmQ5MzVjNmFkYjE1YjYyMDNhIiwicHJvZmlsZU5hbWUiOiJOYWhlbGUiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NmNDRkZjIzMjBiNzYzMTI0N2FhZGY1OWMwZWNlOTdhNGJiNTdkZjI4YzFjZWU3OTM0ZjZhZTI4YWY4OTg5In19fQ=='
   # drop-money-on-ground-skull-texture-signature: 'k1xQ6E1NuxG1ZN7nlQqRJltYrJn44XHVhNA9pSEu2Pt2mkuixMxhIDj2Tg6o+JWlTyGfXtPVWLxygeGymmeSGaVcmDTaCALg7PL11ZfSzSWSxaIufNbj1EcSi264jg5FrAa/2/DnFsgu16wjlWiIGtjCzgx2QabY8YofoPKw6Y6Y5FHZJVXpT8Rsxs8ok6ZHtfm/ZyyTgvRSzh2mKmVyQIYJ1ZKxuqWhDQfbtBpu3dlEzMAEJo85Dvb7uIFYa7WFitjFJue/c9qpqAnazWFLrx33nYpjjeYhcfAvsaNQW3JVFEkyxzEgzOHbdsbiZcqTCwO+49whu175xOqT7XhouEubDT7A3H1jiSvQvkUZJv/GzUF4qFYHSfxhr6OWoBrRGwWmPdcrYx7fUWKo43CAqa5inaiTV4gU70BWrx5i3LhIJxpnspAyTXs8tZBxeoh8IizWD7uXkYYqh3j9cwuHoxfwZuMpOx9CPTC6R/YwJ1YK5OgJBY1+QhNw+NOilWT3jTok82elFvOLm3a5yLyVs+/UPmLD7rZsFm7/DD3VnRcpgjKRiyy2j9vYsYLyNE2BVLVJxBVk2yyy9u7L4VR6PO+8v2dh9DQl7vM2ORCxKPl2lt6woHWM2+eT1PXr16LtMtAOGYT8mlKFhp8Ou2+9fu4AqWkX7n3swU6XLiK5cJs='
   # 
   # Choose between "ITEM","KILLED","SKULL","KILLER"
   drop-money-on-ground-itemtype: SKULL
+
+  # Use the reward as a currency (bag of gold) which can be sold, bought, stored in a chest (in a Bank?)
+  drop-money-use-item-as-currency: false
+
+  # Here you can change the command /mh money ... to /mh <alias> ...
+  # Example: gold,bag,silver,coin,???? 
+  drop-money-command-alias: money
 
   # Here you can set which item should be used when you have chosen drop-money-on-ground-itemtype: ITEM. 
   # Use Minecraft Item names like: 
@@ -860,17 +951,22 @@ dropmoneyonground:
   drop-money-on-ground-item: GOLD_NUGGET
 
   # Here you can set of the color of the number above the dropped item. 
-  # Use color names like WHITE, RED, BLUE
+  # Use color names like WHITE, RED, BLUE, GOLD
   drop-money-on-ground-text-color: WHITE
 
-  # This is the Custom player UUID generated at http://mineskin.org
-  drop-money-on-ground-skull-playerUUID: 3eb9e46c-72ca-374d-8314-058a96cd0e8d
+  # This is the name of the reward
+  drop-money-on-ground-skull-reward-name: Bag of gold
 
   # This is the Custom Texture Value generated at http://mineskin.org
   drop-money-on-ground-skull-texture-value: eyJ0aW1lc3RhbXAiOjE0NzQzMzI0MzY1MDYsInByb2ZpbGVJZCI6IjNlMjZiMDk3MWFjZDRjNmQ5MzVjNmFkYjE1YjYyMDNhIiwicHJvZmlsZU5hbWUiOiJOYWhlbGUiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg2NzczZDc0Y2Y1MDhmZDc3Yzc4MmZmZDI5ZGYyZmU0N2ZiNzE0YjViMGQ3ZGU2N2Q1Mjg2OTMxZTJmMWRmMiJ9fX0=
 
   # This is the Custom Texture Signature generated at http:\\mineskin.org
   drop-money-on-ground-skull-texture-signature: JdvJksowuxYQ0eqf56J+Dmczg7zvlw2DbIc58Q33kRt65uMUNn2iRCQsbNpztC1cAAgyYMOyFDiOUZQeIK03CSRoPLDtWp2u501YoGKqhjgrE0V0UDh3JetWKz4Ob0KmATtY+4R2vSoMjHFEFppM0Oq+8ZER12FAiVEMAzeseFN3Z9fWAMc/V10LoquGBpq6ExTfSCEEMDEGZopF1T8ZBKL0vf4DVendfz4v3yl7bRBzISZEAnF+ECTa9z36r8HRqS8+s0eO/AWYQcRaKIu9H+wSK5F/1v+rgifeSlMAnt1Na8m1b5tMfNuq6pXxWCq4nUGgYVTOLUinqs9ZcFz3Z6Mtx5YtymKk2M0mzxmTm9+AeOL4s3K/UrJYQlcmLBJSv4hd6EigJXoashzWNCHKmFDYCdEhh4FArq4G9vRZtoudcTeMsvi0VmXIgER8U5iSfoTtzXcGbf/GT0ECtgfeA40f5oCqyE4nXreudMmvlDCBr/KHbILQWeeH/jhtYqQ6OwJb3Ji2Bs9F5fQmICSqk7X4yKzexf8rdDhOG1z+/TCot7K8unPVuQx46sXPeP7t2hCiHOXMAnOMt8vuL3gQUURIEM6fMryjmlKsgvk8Jo0gawavRCIZQtA6vT0JRRnSAchzEOA7QP1iiVV3LnwX9Yqw7oMJ/+REV1hWesuzDOc=
+
+  # Dark room mobspawners usually collect items in a HOPPER. This is allowed by default.
+  # If you want to deny HOPPERS to collect MobHunting Money rewards 
+  # set "deny-hoppers-to-pickup-money-on-ground"=false
+  deny-hoppers-to-pickup-money-on-ground: true
 
 # ########################################################################
 # Integration to other plugins.
@@ -956,6 +1052,10 @@ plugins:
   # https://www.spigotmc.org/resources/mysterioushalloween.13059/
   disable-integration-mysterious-halloween: false
 
+  # Disable integration with McMMO.
+  # https://www.spigotmc.org/resources/mcmmo.2445/
+  disable-integration-mcmmo: false
+
 # ########################################################################
 # Database Settings.
 # ########################################################################
@@ -972,7 +1072,7 @@ database:
   debug_sql: false
 
   # FOR INTERNAL USE ONLY. DONT CHANGE THIS VALUE!
-  database_version: 3
+  database_version: 4
 
 # ########################################################################
 # Update settings
@@ -984,7 +1084,7 @@ updates:
 
   # Set the number of seconds between each check. Recommended setting is
   # check_every: 7200 ~ to check every second hour.
-  check_every: 7200
+  check_every: 77200
 
   # Set 'autoupdate: true' if you want new updates downloaded and installed.
   # You will still have to reboot the server manually.
@@ -1004,7 +1104,7 @@ general:
   # Please check the lang/ folder for a list of all available translations.
   language: en_US
 
-  # Can the players earn money on mobs spawned from mobspawners and eggs?
+  # Can the players earn money on mobs spawned from mobspawners, eggs and from eggs from Dispensers ?
   allow_mobspawners_and_eggs: false
 
   # Broadcast messages will be send in the ActionBar if MobHunting finds a supported ActionBar plugin.
@@ -1016,10 +1116,12 @@ general:
   # Should the hunt begins achievement be broadcasted?
   broadcast-first-achievement: true
 
-  # Time between saves in ticks (20 ticks ~ 1 sec)
+  # Time between saves in ticks (20 ticks ~ 1 sec) This number must be higher that 1200 ticks = 2 minutes,
+  # but I recommend to save every 5th minute = 6000 ticks
   save-period: 6000
 
-  # Time between leaderboard updates in ticks (20 ticks ~ 1 sec)
+  # Time between leaderboard updates in ticks (20 ticks ~ 1 sec) This number must be higher that 1200 ticks = 2 minutes,
+  # but I recommend to update leaderboards max every 5 min = 6000 ticks
   leaderboard-update-period: 1200
 
   # Time in seconds after attacking a mob that can be counted as a kill
@@ -1038,7 +1140,7 @@ general:
 
   # This is the minimum reward which will which will be paid to the player 0.01 will be fine
   # in most installation, but Gringott users who want very low rewards (like 0.001  for killing
-  # a mob) will have to lower the minimum reward. Remember that some multipiers are less than 1
+  # a mob) will have to lower the minimum reward. Remember that some multipliers are less than 1
   #  and grinding detection and penalties. The minimum_reward should therefor be less than 10%
   #  of smallest reward. In the Gringotts example minimum_reward should be 0.0001 or 0.00005.
   minimum_reward: 1.0E-5
@@ -1048,7 +1150,7 @@ general:
   # when killing Mobs. The player can disable this InGame by using the command '/mobhunt learn'
   newplayer_learning_mode: false
 
-  # When use_gui_for_archivements=true the status of players achievemens will
+  # When use_gui_for_achivements=true the status of players achievements will
   # be showed in a Inventory GUI.
   use_gui_for_achievements: false
 
@@ -1060,13 +1162,13 @@ general:
   # (because player is grinding or protected by Worldguard)
   # If you want the mobs to drops normal rewards set 
   # "try-to-cancel-natural-drops"=false
-  try-to-cancel-natural-drops: true
+  try-to-cancel-natural-drops: false
 
   # Try to cancel XP drops when a mob is killed while the MobHunting reward is cancelled 
   # (because player is grinding or protected by Worldguard)
   # If you want the mobs to drop normal XP set 
   # "try-to-cancel-xp-drops"=false
-  try-to-cancel-xp-drops: true
+  try-to-cancel-xp-drops: false
 
   # Try to cancel natural drops when a mob is killed the player is in creative mode.
   # If you want the mobs to drops normal rewards set 
